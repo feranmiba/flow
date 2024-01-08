@@ -1,13 +1,13 @@
-import Authentication from 0x06
+import SomeContract from 0x05
 
-transaction(firstName: String, lastName: String, birthday: String, account: Address) {
+transaction() {
 
-    prepare(signer: AuthAccount) {}
+  prepare(acct: AuthAccount) {
+    log(acct.address)
+    log(SomeContract.structFunc)
+  }
 
-    execute {
-        Authentication.addProfile(firstName: firstName, lastName: lastName, birthday: birthday, account: account)
-        log("We're done.")
-    }
+  execute {
+  
+  }
 }
-
-
